@@ -7,16 +7,16 @@ const htmlmin = require('gulp-htmlmin');
 const pump = require('pump');
 const babel = require('gulp-babel');
 
-// gulp.task('html', () => {
-//   return gulp
-//     .src('./src/*.html')
-//     .pipe(htmlmin({ collapseWhitespace: true }))
-//     .pipe(gulp.dest('./dist/'));
-// });
+gulp.task('html', () => {
+  return gulp
+    .src('./*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('./dist/'));
+});
 
 gulp.task('css', () => {
   return gulp
-    .src('./src/css/*.css')
+    .src('./css/*.css')
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(gulp.dest('./dist/css'));
 });
@@ -24,7 +24,7 @@ gulp.task('css', () => {
 gulp.task('js', function(cb) {
   pump(
     [
-      gulp.src('./src/js/*.js'),
+      gulp.src('./js/*.js'),
       sourcemaps.init(),
       babel({
         presets: ['env']
@@ -39,7 +39,7 @@ gulp.task('js', function(cb) {
 
 gulp.task('img', () => {
   return gulp
-    .src('./src/img/*')
+    .src('./img/*')
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
@@ -53,4 +53,4 @@ gulp.task('img', () => {
     .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('default', ['css', 'js', 'img']);
+gulp.task('default', ['html', 'css', 'js', 'img']);

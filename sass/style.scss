@@ -178,7 +178,7 @@ nav {
 
 // Services
 .section-services {
-  background: $brandSecondary;
+  background: url(../img/geometry2.png);
 }
 
 .services-title {
@@ -224,8 +224,8 @@ nav {
   }
   h3:after {
     content: '';
-    background: linear-gradient(45deg, $brandSecondary, #fff);
-    transform: skew(50deg);
+    background: linear-gradient(45deg, ($brandSecondary - 20), #fff);
+    transform: skew(80deg);
     height: 40%;
     position: absolute;
     width: calc(100% + 20px);
@@ -234,6 +234,10 @@ nav {
     margin-right: 20px;
     z-index: -1;
     opacity: 0.6;
+  }
+
+  .portfolio-img {
+    margin: 15px 0;
   }
 }
 
@@ -249,13 +253,15 @@ nav {
 
 // Contact
 .section-contact {
-  background: $brandSecondary;
+  background: url(../img/stripes-light.png) center;
 }
 
 .contact-form {
+  height: 100%;
+  border: 5px dashed #000;
   border-radius: 1rem;
   max-width: 700px;
-  height: 100%;
+  margin-top: 40px;
   form {
     padding: 5px 30px 15px 30px !important;
     .submit-btn {

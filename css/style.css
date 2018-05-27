@@ -2629,7 +2629,7 @@ nav i { color: #80cbc4; padding: 0 5px 0 0; }
 
 .about-img { max-width: 400px; margin-top: 40px; }
 
-.section-services { background: #78909c; }
+.section-services { background: url(../img/geometry2.png); }
 
 .services-title { margin-bottom: 40px; }
 
@@ -2643,15 +2643,16 @@ nav i { color: #80cbc4; padding: 0 5px 0 0; }
 
 .section-portfolio { background: #80cbc4; }
 .section-portfolio h3 { display: inline-block; position: relative; color: #fff; text-shadow: 1px 1px #000; font-weight: 700; z-index: 0; }
-.section-portfolio h3:after { content: ''; background: linear-gradient(45deg, #78909c, #fff); transform: skew(50deg); height: 40%; position: absolute; width: calc(100% + 20px); bottom: 0; left: -10px; margin-right: 20px; z-index: -1; opacity: 0.6; }
+.section-portfolio h3:after { content: ''; background: linear-gradient(45deg, #647c88, #fff); transform: skew(80deg); height: 40%; position: absolute; width: calc(100% + 20px); bottom: 0; left: -10px; margin-right: 20px; z-index: -1; opacity: 0.6; }
+.section-portfolio .portfolio-img { margin: 15px 0; }
 
 .btn-portfolio { background: #78909c; margin: 15px 0 0 0; }
 
 .btn-portfolio:hover { background: #647c88; }
 
-.section-contact { background: #78909c; }
+.section-contact { background: url(../img/stripes-light.png) center; }
 
-.contact-form { border-radius: 1rem; max-width: 700px; height: 100%; }
+.contact-form { height: 100%; border: 5px dashed #000; border-radius: 1rem; max-width: 700px; margin-top: 40px; }
 .contact-form form { padding: 5px 30px 15px 30px !important; }
 @media (max-width: 414px) { .contact-form form .submit-btn { display: flex; justify-content: center; } }
 

@@ -9,14 +9,14 @@ const babel = require('gulp-babel');
 
 gulp.task('html', () => {
   return gulp
-    .src('./*.html')
+    .src('./src/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('css', () => {
   return gulp
-    .src('./css/*.css')
+    .src('./src/css/*.css')
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(gulp.dest('./dist/css'));
 });
@@ -24,7 +24,7 @@ gulp.task('css', () => {
 gulp.task('js', function(cb) {
   pump(
     [
-      gulp.src('./js/*.js'),
+      gulp.src('./src/js/*.js'),
       sourcemaps.init(),
       babel({
         presets: ['env']
@@ -39,7 +39,7 @@ gulp.task('js', function(cb) {
 
 gulp.task('img', () => {
   return gulp
-    .src('./img/*')
+    .src('./src/img/*')
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),

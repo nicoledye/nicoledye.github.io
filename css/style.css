@@ -2603,6 +2603,8 @@ nav i { color: #80cbc4; padding: 0 5px 0 0; }
 .brand-logo { max-width: 175px; top: 8px; }
 @media (max-width: 414px) { .brand-logo { top: 9px; } }
 
+.sidenav li > a.btn-flat { color: #fff; }
+
 .section-showcase { height: 75vh; width: 100%; display: flex; justify-content: center; align-items: center; text-align: center; background-color: #80cbc4; background-blend-mode: multiply; background-size: cover; background-position: center bottom; background-image: url(../img/placeholder.jpg); }
 
 .showcase-background { position: relative; object-fit: cover; width: 100%; height: 100%; opacity: 0.3; }
@@ -2651,8 +2653,9 @@ nav i { color: #80cbc4; padding: 0 5px 0 0; }
 
 .contact-form { border-radius: 1rem; max-width: 700px; height: 100%; }
 .contact-form form { padding: 5px 30px 15px 30px !important; }
+@media (max-width: 414px) { .contact-form form .submit-btn { display: flex; justify-content: center; } }
 
-.form-title { padding-top: 30px; }
+.form-title { padding: 40px 15px 0 15px; }
 
 .section-footer { background: #80cbc4; }
 @media (max-width: 768px) { .section-footer { text-align: center; } }

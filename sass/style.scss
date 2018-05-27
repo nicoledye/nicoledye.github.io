@@ -79,6 +79,10 @@ nav {
   }
 }
 
+.sidenav li > a.btn-flat {
+  color: #fff;
+}
+
 // Showcase
 
 .section-showcase {
@@ -254,11 +258,17 @@ nav {
   height: 100%;
   form {
     padding: 5px 30px 15px 30px !important;
+    .submit-btn {
+      @include bp(breakpointPhone) {
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 }
 
 .form-title {
-  padding-top: 30px;
+  padding: 40px 15px 0 15px;
 }
 
 // Footer

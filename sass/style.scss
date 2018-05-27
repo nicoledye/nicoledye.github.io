@@ -225,8 +225,7 @@ nav {
   h3:after {
     content: '';
     background: linear-gradient(45deg, ($brandSecondary - 20), #fff);
-    transform: skew(80deg);
-    height: 40%;
+    height: 30%;
     position: absolute;
     width: calc(100% + 20px);
     bottom: 0;

@@ -7,12 +7,12 @@ const htmlmin = require('gulp-htmlmin');
 const pump = require('pump');
 const babel = require('gulp-babel');
 
-gulp.task('html', () => {
-  return gulp
-    .src('./src/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('./dist/'));
-});
+// gulp.task('html', () => {
+//   return gulp
+//     .src('./src/*.html')
+//     .pipe(htmlmin({ collapseWhitespace: true }))
+//     .pipe(gulp.dest('./dist/'));
+// });
 
 gulp.task('css', () => {
   return gulp
@@ -53,4 +53,4 @@ gulp.task('img', () => {
     .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('default', ['html', 'css', 'js', 'img']);
+gulp.task('default', ['css', 'js', 'img']);

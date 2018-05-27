@@ -1,0 +1,287 @@
+// Import Materialize
+@import 'materialize.scss';
+
+// Import Edo Font
+@font-face {
+  font-family: edo;
+  src: url(../fonts/edo.ttf);
+}
+
+// Variables
+$brandPrimary: #80cbc4;
+$brandSecondary: #78909c;
+
+// Media Queries Mixin
+@mixin bp($point) {
+  @if $point == breakpointTablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == breakpointPhone {
+    @media (max-width: 414px) {
+      @content;
+    }
+  }
+}
+
+// Utilties
+h1,
+h2 {
+  text-transform: uppercase;
+  font-family: edo;
+}
+
+h3,
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary {
+  background: $brandPrimary;
+  border-radius: 3rem;
+}
+
+.btn-primary:hover {
+  background: $brandPrimary - 20;
+}
+
+.btn-secondary {
+  background: $brandSecondary;
+  border-radius: 3rem;
+}
+
+.btn-secondary:hover {
+  background: $brandSecondary - 20;
+}
+
+// Navigation
+nav {
+  background: #fff;
+  @include bp(breakpointPhone) {
+    height: 62px;
+  }
+
+  i {
+    color: $brandPrimary;
+    padding: 0 5px 0 0;
+  }
+}
+
+.request-quote-cta {
+  border-radius: 2rem;
+}
+
+.brand-logo {
+  max-width: 175px;
+  top: 8px;
+  @include bp(breakpointPhone) {
+    top: 9px;
+  }
+}
+
+// Showcase
+
+.section-showcase {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $brandPrimary;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center bottom;
+  background-image: url(../img/placeholder.jpg);
+}
+
+.showcase-background {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.showcase-content {
+  position: absolute;
+  z-index: 1;
+}
+
+.showcase-title {
+  font-size: 7.5rem;
+  margin: 0 0 45px 0;
+  text-shadow: 1px 1px #000, 1px 1px #000;
+  @include bp(breakpointPhone) {
+    font-size: 5.5rem;
+  }
+}
+
+.btn-showcase {
+  @extend .btn-primary;
+  border-radius: 2rem;
+  width: 250px;
+  height: 60px;
+  letter-spacing: 2px;
+  line-height: 60px;
+  font-weight: 700;
+  border: 2px solid #fff;
+}
+
+// Skills
+.section-skills {
+  background: $brandSecondary;
+  padding: 35px 0 10px 0;
+  border-top: 3px solid #fff;
+  .row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    i {
+      font-size: 4.75rem;
+      @include bp(breakpointPhone) {
+        font-size: 2.75rem;
+      }
+    }
+    img {
+      @include bp(breakpointPhone) {
+        max-width: 2.75rem;
+      }
+    }
+  }
+}
+
+// About
+.section-about {
+  background: $brandPrimary;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  @include bp(breakpointPhone) {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.about-img {
+  max-width: 400px;
+  margin-top: 40px;
+}
+
+// Services
+.section-services {
+  background: $brandSecondary;
+}
+
+.services-title {
+  margin-bottom: 40px;
+}
+
+.btn-services {
+  @extend .btn-primary;
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.2s linear;
+}
+
+.btn-services:hover {
+  transform: scale(1.03);
+}
+
+.card {
+  border-top: 30px solid $brandPrimary;
+  padding: 40px 10px 10px;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  i {
+    font-size: 4rem;
+    padding: 10px 0;
+  }
+}
+
+// Portfolio
+.section-portfolio {
+  background: $brandPrimary;
+  h3 {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    font-weight: 700;
+    z-index: 0;
+  }
+  h3:after {
+    content: '';
+    background: linear-gradient(45deg, $brandSecondary, #fff);
+    transform: skew(50deg);
+    height: 40%;
+    position: absolute;
+    width: calc(100% + 20px);
+    bottom: 0;
+    left: -10px;
+    margin-right: 20px;
+    z-index: -1;
+    opacity: 0.6;
+  }
+}
+
+.btn-portfolio {
+  @extend .btn-services;
+  background: $brandSecondary;
+  margin: 15px 0 0 0;
+}
+
+.btn-portfolio:hover {
+  background: $brandSecondary - 20;
+}
+
+// Contact
+.section-contact {
+  background: $brandSecondary;
+}
+
+.contact-form {
+  border-radius: 1rem;
+  max-width: 700px;
+  height: 100%;
+  form {
+    padding: 5px 30px 15px 30px !important;
+  }
+}
+
+.form-title {
+  padding-top: 30px;
+}
+
+// Footer
+.section-footer {
+  background: $brandPrimary;
+  @include bp(breakpointTablet) {
+    text-align: center;
+  }
+}
+
+.footer-address {
+  font-size: 1.15rem;
+  line-height: 0.75;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  @include bp(breakpointTablet) {
+    justify-content: center;
+  }
+  li:nth-child(2) {
+    margin-left: 15px;
+  }
+}

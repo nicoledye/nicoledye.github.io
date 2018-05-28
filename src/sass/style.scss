@@ -292,11 +292,12 @@ nav {
   }
   .footer-content {
     display: grid;
-    grid-template-columns: 350px 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
-    margin: 5px 100px 25px 50px;
     font-size: 1.125rem;
+    text-align: center;
+    margin: 0 100px;
     @include bp(breakpointTablet) {
       grid-template-columns: 1fr;
       margin: 0;
@@ -308,21 +309,24 @@ nav {
   grid-column: 1/2;
   @include bp(breakpointTablet) {
     grid-column: 1 / -1;
-    img {
+  }
+  img {
+    max-width: 300px;
+    @include bp(breakpointTablet) {
       max-width: 200px;
     }
   }
 }
 
 .col-address {
-  grid-column: 3/4;
+  grid-column: 2/3;
   @include bp(breakpointTablet) {
     grid-column: 1 / -1;
   }
 }
 
 .col-sitemap {
-  grid-column: -1;
+  grid-column: 3 / 4;
   @include bp(breakpointTablet) {
     grid-column: 1 / -1;
   }
@@ -335,7 +339,7 @@ nav {
 
 .social-icons {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   @include bp(breakpointTablet) {
     justify-content: center;

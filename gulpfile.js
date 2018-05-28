@@ -24,7 +24,7 @@ gulp.task('css', () => {
 gulp.task('js', function(cb) {
   pump(
     [
-      gulp.src('./src/js/*.js'),
+      gulp.src('./src/js/**/*.js'),
       sourcemaps.init(),
       babel({
         presets: ['env']

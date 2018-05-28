@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Init Scrollspy
-
 document.addEventListener('DOMContentLoaded', () => {
   const elems = document.querySelectorAll('.scrollspy');
   const instances = M.ScrollSpy.init(elems);

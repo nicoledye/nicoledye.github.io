@@ -297,19 +297,35 @@ nav {
     align-items: center;
     margin: 5px 100px 25px 50px;
     font-size: 1.125rem;
+    @include bp(breakpointTablet) {
+      grid-template-columns: 1fr;
+      margin: 0;
+    }
   }
 }
 
 .col-logo {
   grid-column: 1/2;
+  @include bp(breakpointTablet) {
+    grid-column: 1 / -1;
+    img {
+      max-width: 200px;
+    }
+  }
 }
 
 .col-address {
   grid-column: 3/4;
+  @include bp(breakpointTablet) {
+    grid-column: 1 / -1;
+  }
 }
 
 .col-sitemap {
   grid-column: -1;
+  @include bp(breakpointTablet) {
+    grid-column: 1 / -1;
+  }
 }
 
 .footer-address {

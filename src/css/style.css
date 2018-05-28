@@ -2664,12 +2664,17 @@ nav i { color: #80cbc4; padding: 0 5px 0 0; }
 .section-footer { background: #80cbc4; }
 @media (max-width: 768px) { .section-footer { text-align: center; } }
 .section-footer .footer-content { display: grid; grid-template-columns: 350px 1fr 1fr 1fr; justify-content: center; align-items: center; margin: 5px 100px 25px 50px; font-size: 1.125rem; }
+@media (max-width: 768px) { .section-footer .footer-content { grid-template-columns: 1fr; margin: 0; } }
 
 .col-logo { grid-column: 1/2; }
+@media (max-width: 768px) { .col-logo { grid-column: 1 / -1; }
+  .col-logo img { max-width: 200px; } }
 
 .col-address { grid-column: 3/4; }
+@media (max-width: 768px) { .col-address { grid-column: 1 / -1; } }
 
 .col-sitemap { grid-column: -1; }
+@media (max-width: 768px) { .col-sitemap { grid-column: 1 / -1; } }
 
 .footer-address { font-size: 1.15rem; line-height: 0.75; }
 

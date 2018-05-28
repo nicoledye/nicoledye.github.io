@@ -14,11 +14,11 @@ $brandSecondary: #78909c;
 // Media Queries Mixin
 @mixin bp($point) {
   @if $point == breakpointTablet {
-    @media (max-width: 768px) {
+    @media (max-width: 850px) {
       @content;
     }
   } @else if $point == breakpointPhone {
-    @media (max-width: 414px) {
+    @media (max-width: 600px) {
       @content;
     }
   }
@@ -65,9 +65,6 @@ nav {
   background: #fff;
   height: 75px;
   padding-top: 5px;
-  @include bp(breakpointPhone) {
-    height: 62px;
-  }
 
   .nav-links {
     margin-right: 100px;
@@ -177,13 +174,19 @@ nav {
   background: $brandPrimary;
 }
 
-.about-content {
+.about-body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   @include bp(breakpointPhone) {
     justify-content: center;
+    text-align: center;
+  }
+}
+
+.about-content {
+  @include bp(breakpointPhone) {
     text-align: center;
   }
 }
@@ -302,6 +305,7 @@ nav {
     padding-bottom: 1.3rem;
     @include bp(breakpointTablet) {
       grid-template-columns: 1fr;
+      text-align: center;
       margin: 0;
     }
   }

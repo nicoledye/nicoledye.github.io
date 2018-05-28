@@ -2597,14 +2597,13 @@ p { font-size: 1.125rem; }
 .btn-secondary:hover { background: #5f7682; }
 
 nav { background: #fff; height: 75px; padding-top: 5px; }
-@media (max-width: 414px) { nav { height: 62px; } }
 nav .nav-links { margin-right: 100px; text-transform: uppercase; }
 nav i { color: #80cbc4; padding: 0 5px 0 0; }
 
 .request-quote-cta { border-radius: 2rem; }
 
 .brand-logo { max-width: 200px; top: 6px; left: 100px; }
-@media (max-width: 414px) { .brand-logo { top: 9px; } }
+@media (max-width: 600px) { .brand-logo { top: 9px; } }
 
 .sidenav li > a.btn-flat { color: #fff; }
 
@@ -2615,21 +2614,23 @@ nav i { color: #80cbc4; padding: 0 5px 0 0; }
 .showcase-content { position: absolute; z-index: 1; }
 
 .showcase-title { font-size: 7.5rem; margin: 0 0 45px 0; text-shadow: 1px 1px #000, 1px 1px #000; }
-@media (max-width: 414px) { .showcase-title { font-size: 5.5rem; } }
+@media (max-width: 600px) { .showcase-title { font-size: 5.5rem; } }
 
 .btn-showcase { border-radius: 2rem; width: 250px; height: 60px; letter-spacing: 2px; line-height: 60px; font-weight: 700; border: 2px solid #fff; }
 
 .section-skills { background: #78909c; padding: 25px 0 4px 0; border-top: 3px solid #fff; border-bottom: 3px solid #fff; }
 .section-skills .row { display: flex; justify-content: space-evenly; align-items: center; }
 .section-skills .row i { font-size: 3.75rem; }
-@media (max-width: 414px) { .section-skills .row i { font-size: 2.75rem; } }
+@media (max-width: 600px) { .section-skills .row i { font-size: 2.75rem; } }
 .section-skills .row img { max-width: 3.3rem; }
-@media (max-width: 414px) { .section-skills .row img { max-width: 2.75rem; } }
+@media (max-width: 600px) { .section-skills .row img { max-width: 2.75rem; } }
 
 .section-about { background: #80cbc4; }
 
-.about-content { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; }
-@media (max-width: 414px) { .about-content { justify-content: center; text-align: center; } }
+.about-body { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; }
+@media (max-width: 600px) { .about-body { justify-content: center; text-align: center; } }
+
+@media (max-width: 600px) { .about-content { text-align: center; } }
 
 .about-img { max-width: 400px; margin-top: 40px; }
 
@@ -2657,30 +2658,30 @@ nav i { color: #80cbc4; padding: 0 5px 0 0; }
 
 .contact-form { height: 100%; border-radius: 1rem; max-width: 700px; margin-top: 40px; border: 5px solid #eef1f2; }
 .contact-form form { padding: 5px 30px 15px 30px !important; }
-@media (max-width: 414px) { .contact-form form .submit-btn { display: flex; justify-content: center; } }
+@media (max-width: 600px) { .contact-form form .submit-btn { display: flex; justify-content: center; } }
 
 .form-title { padding: 40px 15px 0 15px; }
 
 .section-footer { background: #80cbc4; }
-@media (max-width: 768px) { .section-footer { text-align: center; } }
+@media (max-width: 850px) { .section-footer { text-align: center; } }
 .section-footer .footer-content { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 20%; justify-content: center; align-items: center; font-size: 1.125rem; text-align: left; margin: 0 100px; padding-bottom: 1.3rem; }
-@media (max-width: 768px) { .section-footer .footer-content { grid-template-columns: 1fr; margin: 0; } }
+@media (max-width: 850px) { .section-footer .footer-content { grid-template-columns: 1fr; text-align: center; margin: 0; } }
 
 .col-logo { grid-column: 1/2; }
-@media (max-width: 768px) { .col-logo { grid-column: 1 / -1; } }
+@media (max-width: 850px) { .col-logo { grid-column: 1 / -1; } }
 .col-logo img { max-width: 300px; }
-@media (max-width: 768px) { .col-logo img { max-width: 200px; } }
+@media (max-width: 850px) { .col-logo img { max-width: 200px; } }
 
 .col-address { grid-column: 2/3; }
-@media (max-width: 768px) { .col-address { grid-column: 1 / -1; } }
+@media (max-width: 850px) { .col-address { grid-column: 1 / -1; } }
 
 .col-sitemap { grid-column: 3 / 4; }
-@media (max-width: 768px) { .col-sitemap { grid-column: 1 / -1; } }
+@media (max-width: 850px) { .col-sitemap { grid-column: 1 / -1; } }
 
 .footer-address { font-size: 1.15rem; line-height: 0.75; }
 
 .social-icons { display: flex; justify-content: start; align-items: center; }
-@media (max-width: 768px) { .social-icons { justify-content: center; } }
+@media (max-width: 850px) { .social-icons { justify-content: center; } }
 .social-icons li:not(.linkedin) { margin-left: 15px; }
 
 /*# sourceMappingURL=style.css.map */

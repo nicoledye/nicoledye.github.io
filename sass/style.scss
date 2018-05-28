@@ -32,8 +32,14 @@ h2 {
 }
 
 h3,
+p,
+a {
+  font-family: 'Muli', sans-serif;
+  letter-spacing: 0.5px;
+}
+
 p {
-  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;
 }
 
 .btn-primary {
@@ -42,7 +48,7 @@ p {
 }
 
 .btn-primary:hover {
-  background: $brandPrimary - 20;
+  background: darken($brandPrimary, 10%);
 }
 
 .btn-secondary {
@@ -51,14 +57,21 @@ p {
 }
 
 .btn-secondary:hover {
-  background: $brandSecondary - 20;
+  background: darken($brandSecondary, 10%);
 }
 
 // Navigation
 nav {
   background: #fff;
+  height: 75px;
+  padding-top: 5px;
   @include bp(breakpointPhone) {
     height: 62px;
+  }
+
+  .nav-links {
+    margin-right: 100px;
+    text-transform: uppercase;
   }
 
   i {
@@ -72,8 +85,9 @@ nav {
 }
 
 .brand-logo {
-  max-width: 175px;
-  top: 8px;
+  max-width: 200px;
+  top: 6px;
+  left: 100px;
   @include bp(breakpointPhone) {
     top: 9px;
   }
@@ -97,6 +111,7 @@ nav {
   background-size: cover;
   background-position: center bottom;
   background-image: url(../img/placeholder.jpg);
+  background-attachment: fixed;
 }
 
 .showcase-background {
@@ -135,19 +150,21 @@ nav {
 // Skills
 .section-skills {
   background: $brandSecondary;
-  padding: 35px 0 10px 0;
+  padding: 25px 0 4px 0;
   border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
   .row {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     i {
-      font-size: 4.75rem;
+      font-size: 3.75rem;
       @include bp(breakpointPhone) {
         font-size: 2.75rem;
       }
     }
     img {
+      max-width: 3.3rem;
       @include bp(breakpointPhone) {
         max-width: 2.75rem;
       }
@@ -178,7 +195,9 @@ nav {
 
 // Services
 .section-services {
-  background: url(../img/geometry2.png);
+  background: url(../img/nd-pattern.png);
+  background-size: 30%;
+  background-attachment: fixed;
 }
 
 .services-title {
@@ -218,21 +237,9 @@ nav {
     display: inline-block;
     position: relative;
     color: #fff;
-    text-shadow: 1px 1px #000;
-    font-weight: 700;
+    font-weight: 300;
+    font-size: 2rem;
     z-index: 0;
-  }
-  h3:after {
-    content: '';
-    background: linear-gradient(45deg, ($brandSecondary - 20), #fff);
-    height: 30%;
-    position: absolute;
-    width: calc(100% + 20px);
-    bottom: 0;
-    left: -10px;
-    margin-right: 20px;
-    z-index: -1;
-    opacity: 0.6;
   }
 
   .portfolio-img {
@@ -247,20 +254,21 @@ nav {
 }
 
 .btn-portfolio:hover {
-  background: $brandSecondary - 20;
+  background: darken($brandSecondary, 10%);
 }
 
 // Contact
 .section-contact {
-  background: url(../img/stripes-light.png) center;
+  background: url(../img/funky-lines.png) center;
+  background-attachment: fixed;
 }
 
 .contact-form {
   height: 100%;
-  border: 5px dashed #000;
   border-radius: 1rem;
   max-width: 700px;
   margin-top: 40px;
+  border: 5px solid lighten($brandSecondary, 40%);
   form {
     padding: 5px 30px 15px 30px !important;
     .submit-btn {
@@ -282,6 +290,26 @@ nav {
   @include bp(breakpointTablet) {
     text-align: center;
   }
+  .footer-content {
+    display: grid;
+    grid-template-columns: 350px 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 100px 25px 50px;
+    font-size: 1.125rem;
+  }
+}
+
+.col-logo {
+  grid-column: 1/2;
+}
+
+.col-address {
+  grid-column: 3/4;
+}
+
+.col-sitemap {
+  grid-column: -1;
 }
 
 .footer-address {
@@ -296,7 +324,7 @@ nav {
   @include bp(breakpointTablet) {
     justify-content: center;
   }
-  li:nth-child(2) {
+  li:not(.linkedin) {
     margin-left: 15px;
   }
 }

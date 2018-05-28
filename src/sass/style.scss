@@ -293,11 +293,13 @@ nav {
   .footer-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20%;
     justify-content: center;
     align-items: center;
     font-size: 1.125rem;
-    text-align: center;
+    text-align: left;
     margin: 0 100px;
+    padding-bottom: 1.3rem;
     @include bp(breakpointTablet) {
       grid-template-columns: 1fr;
       margin: 0;
@@ -339,7 +341,7 @@ nav {
 
 .social-icons {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   @include bp(breakpointTablet) {
     justify-content: center;

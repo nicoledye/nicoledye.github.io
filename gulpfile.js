@@ -6,6 +6,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const htmlmin = require('gulp-htmlmin');
 const pump = require('pump');
 const babel = require('gulp-babel');
+const sass = require('gulp-sass');
 
 gulp.task('html', () => {
   return gulp
@@ -19,6 +20,17 @@ gulp.task('css', () => {
     .src('./src/css/*.css')
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('sass', function() {
+  return gulp
+    .src('./src/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./src/css'));
+});
+
+gulp.task('sass:watch', function() {
+  gulp.watch('./src/sass/**/*.scss', ['sass']);
 });
 
 gulp.task('js', function(cb) {

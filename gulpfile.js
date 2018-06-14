@@ -65,4 +65,8 @@ gulp.task('img', () => {
     .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('default', ['html', 'css', 'js', 'img']);
+gulp.task('fonts', function() {
+  return gulp.src('./src/fonts/*.ttf').pipe(gulp.dest('./dist'));
+});
+
+gulp.task('default', ['html', 'css', 'js', 'img', 'fonts']);

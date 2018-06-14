@@ -71,8 +71,8 @@ gulp.task('fonts', function() {
 
 gulp.task('materialize', function() {
   return gulp
-    .src('./js/bin/materialize.min.js')
+    .src('./src/js/bin/materialize.min.js')
     .pipe(gulp.dest('./dist/js/bin'));
 });
 
-gulp.task('default', ['html', 'css', 'js', 'img', 'fonts', 'materialize']);
+gulp.task('default', ['html', 'css', 'materialize', 'js', 'img', 'fonts']);

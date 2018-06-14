@@ -244,20 +244,18 @@ nav {
     font-size: 2rem;
     z-index: 0;
   }
-
-  .portfolio-img {
-    margin: 15px 0;
-  }
-}
-
-.btn-portfolio {
-  @extend .btn-services;
-  background: $brandSecondary;
-  margin: 15px 0 0 0;
 }
 
 .btn-portfolio:hover {
   background: darken($brandSecondary, 10%);
+}
+
+.carousel {
+  height: 300px;
+}
+
+.carousel .carousel-item {
+  width: 400px;
 }
 
 // Contact

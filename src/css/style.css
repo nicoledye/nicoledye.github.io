@@ -6539,11 +6539,11 @@ a {
 p {
   font-size: 1.125rem; }
 
-.btn-primary, .btn-showcase, .btn-services, .btn-portfolio {
+.btn-primary, .btn-showcase, .btn-services {
   background: #80cbc4;
   border-radius: 3rem; }
 
-.btn-primary:hover, .btn-showcase:hover, .btn-services:hover, .btn-portfolio:hover {
+.btn-primary:hover, .btn-showcase:hover, .btn-services:hover {
   background: #5cbcb3; }
 
 .btn-secondary {
@@ -6669,13 +6669,13 @@ nav {
 .services-title {
   margin-bottom: 40px; }
 
-.btn-services, .btn-portfolio {
+.btn-services {
   display: block;
   color: #fff;
   font-size: 1rem;
   transition: all 0.2s linear; }
 
-.btn-services:hover, .btn-portfolio:hover {
+.btn-services:hover {
   transform: scale(1.03); }
 
 .card {
@@ -6697,15 +6697,15 @@ nav {
     font-weight: 300;
     font-size: 2rem;
     z-index: 0; }
-  .section-portfolio .portfolio-img {
-    margin: 15px 0; }
-
-.btn-portfolio {
-  background: #78909c;
-  margin: 15px 0 0 0; }
 
 .btn-portfolio:hover {
   background: #5f7682; }
+
+.carousel {
+  height: 300px; }
+
+.carousel .carousel-item {
+  width: 400px; }
 
 .section-contact {
   background: url(../img/funky-lines.png) center;

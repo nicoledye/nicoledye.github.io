@@ -172,6 +172,9 @@ nav {
 // About
 .section-about {
   background: $brandPrimary;
+  .container {
+    width: 90%;
+  }
 }
 
 .about-body {

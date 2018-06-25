@@ -6642,6 +6642,8 @@ nav {
 
 .section-about {
   background: #80cbc4; }
+  .section-about .container {
+    width: 90%; }
 
 .about-body {
   display: flex;

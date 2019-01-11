@@ -9,12 +9,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "gulp": "^4.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "gulp": "^4.0.0",
     "gulp-babel": "^7.0.1",
     "gulp-clean-css": "^3.9.4",
     "gulp-htmlmin": "^4.0.0",

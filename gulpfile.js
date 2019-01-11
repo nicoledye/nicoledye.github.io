@@ -75,4 +75,7 @@ gulp.task('materialize', function() {
     .pipe(gulp.dest('./dist/js/bin'));
 });
 
-gulp.task('default', ['html', 'css', 'materialize', 'js', 'img', 'fonts']);
+gulp.task(
+  'default',
+  gulp.parallel('html', 'css', 'materialize', 'js', 'img', 'fonts')
+);

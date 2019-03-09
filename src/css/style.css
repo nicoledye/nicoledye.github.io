@@ -6799,4 +6799,4 @@ nav {
     transform: translate3d(0, 0, 0); } }
 
 .fade-in-down-big {
-  animation-name: fadeInDownBig; }
+  animation: fadeInDownBig 1s; }

@@ -6804,4 +6804,4 @@ nav {
     transform: scale(1); } }
 
 .jack-in-the-box {
-  animation: jackInTheBox 1s linear; }
+  animation: jackInTheBox 1.5s ease; }

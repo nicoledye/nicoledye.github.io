@@ -361,27 +361,18 @@ nav {
   }
 }
 
-@keyframes jackInTheBox {
+@keyframes fadeInDownBig {
   from {
     opacity: 0;
-    transform: scale(0.1) rotate(30deg);
-    transform-origin: center bottom;
-  }
-
-  50% {
-    transform: rotate(-10deg);
-  }
-
-  70% {
-    transform: rotate(3deg);
+    transform: translate3d(0, -2000px, 0);
   }
 
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.jack-in-the-box {
-  animation: jackInTheBox 1.5s ease;
+.fade-in-down-big {
+  animation-name: fadeInDownBig;
 }
